@@ -253,7 +253,7 @@ namespace netgen
 
   inline void DummyTaskManager2 (function<void(int,int)> func)
   { func(0,1); }
-  inline void DummyTracer2 (string, bool) { ; } 
+  inline void DummyTracer2 (const string&, bool) { ; } 
   
   class DLL_HEADER Ngx_Mesh
   {
@@ -349,7 +349,7 @@ namespace netgen
 
     void Refine (NG_REFINEMENT_TYPE reftype, bool onlyonce,
                  void (*taskmanager)(function<void(int,int)>) = &DummyTaskManager2,
-                 void (*tracer)(string, bool) = &DummyTracer2);
+                 void (*tracer)(const string&, bool) = &DummyTracer2);
 
     int GetHPElementLevel (int ei, int dir) const;
   

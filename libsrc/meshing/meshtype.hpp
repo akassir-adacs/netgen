@@ -1309,7 +1309,7 @@ namespace netgen
     /// give up quality class, 3d meshing
     int giveuptol = 10;
     /// maximal outer steps
-    int maxoutersteps = 10;
+    int maxoutersteps = 20;
     /// class starting star-shape filling
     int starshapeclass = 5;
     /// if non-zero, baseelement must have baseelnp points

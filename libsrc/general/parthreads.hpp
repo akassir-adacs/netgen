@@ -97,7 +97,7 @@ void ParallelFor( int first, int next, const TFunc & f )
 
   
   typedef void (*NgTaskManager)(std::function<void(int,int)>);
-  typedef void (*NgTracer)(string, bool);  // false .. start, true .. stop
+  typedef void (*NgTracer)(const string&, bool);  // false .. start, true .. stop
 
   inline void DummyTaskManager (std::function<void(int,int)> func)
   {
@@ -105,7 +105,7 @@ void ParallelFor( int first, int next, const TFunc & f )
     func(1,2);
   }
 
-  inline void DummyTracer (string, bool) { ; }
+  inline void DummyTracer (const string&, bool) { ; }
   
   template <typename FUNC>
   inline void ParallelFor (NgTaskManager tm, size_t n, FUNC func)

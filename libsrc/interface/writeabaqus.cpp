@@ -31,7 +31,7 @@ void WriteAbaqusFormat (const Mesh & mesh,
 
   outfile.precision(8);
 
-  outfile << "*Node" << endl;
+  outfile << "*Node, NSET=Nall" << endl;
 
   int np = mesh.GetNP();
   int ne = mesh.GetNE();
@@ -81,7 +81,7 @@ void WriteAbaqusFormat (const Mesh & mesh,
 		}
 		  
 	      elemcnt++;
-	      outfile << elemcnt << ", ";
+	      outfile << i << ", ";
 	      if (non == 4)
 		{
 		  outfile << el.PNum(1) << ", ";
