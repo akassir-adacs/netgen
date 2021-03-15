@@ -1626,7 +1626,7 @@ namespace netgen
     /// free pyramids
     int giveuptolopenquads = 15;
     /// maximal outer steps
-    int maxoutersteps = 10;
+    int maxoutersteps = 20;
     /// class starting star-shape filling
     int starshapeclass = 5;
     /// if non-zero, baseelement must have baseelnp points

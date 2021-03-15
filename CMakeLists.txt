@@ -50,6 +50,8 @@ set(NGGUI_LIBRARY_TYPE SHARED CACHE STRING "nggui library type")
 
 set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH}" "${CMAKE_CURRENT_SOURCE_DIR}/cmake/cmake_modules")
 
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+
 if(APPLE)
   set(INSTALL_DIR_DEFAULT /Applications/Netgen.app)
 else(APPLE)

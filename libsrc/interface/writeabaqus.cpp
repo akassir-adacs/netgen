@@ -58,7 +58,7 @@ static inline const AbaqusElementType & GetAbaqusType(int dim, int num_nodes)
 
 static void WritePoints ( const Mesh & mesh, ostream & out )
 {
-  out << "*Node" << endl;
+  out << "*Node, NSET=NALL" << endl;
   for(auto pi : mesh.Points().Range() )
   {
     out << pi+1-IndexBASE<PointIndex>() << ", ";
@@ -72,7 +72,7 @@ static void WriteElement(ostream & out, const Mesh& mesh, ElIndex ei, const vect
 {
   el_counter++;
   auto el = mesh[ei];
-  out << el_counter;
+  out << ei;
   for(auto i : Range(el.PNums()))
     out << ", " << el[permutation[i]]+1-IndexBASE<PointIndex>();
   out << '\n';
