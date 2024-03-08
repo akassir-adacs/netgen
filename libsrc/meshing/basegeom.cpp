@@ -522,6 +522,12 @@ namespace netgen
   {
     multithread.percent = 0;
 
+	PrintMessage(2, "NetgenGeometry::GenerateMesh");
+
+	//stringstream ss;
+	//mparam.Print(ss);
+	//PrintMessage(2, ss.str());
+
     if(mparam.perfstepsstart <= MESHCONST_ANALYSE)
       {
         if(!mesh)

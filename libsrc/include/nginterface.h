@@ -469,6 +469,7 @@ extern "C" {
 namespace netgen 
 {
   DLL_HEADER extern int printmessage_importance;
+  DLL_HEADER extern MeshingParameters mparam;
 }
 
 #endif

@@ -346,7 +346,7 @@ namespace netgen
     ///
 
     ///ReadTriangle->STLTriangle, initialise some important variables, always after load!!!
-    virtual void InitSTLGeometry (const NgArray<STLReadTriangle> & readtrigs) override;
+    virtual void InitSTLGeometry (NgArray<STLReadTriangle> & readtrigs) override;
     virtual void TopologyChanged() override; //do some things, if topology changed!
     int CheckGeometryOverlapping();
 

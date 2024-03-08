@@ -5765,7 +5765,7 @@ namespace netgen
   }
 
 
-  void Mesh::GetIntersectingVolEls(const Point3d& p1, const Point3d& p2, 
+  void Mesh:: GetIntersectingVolEls(const Point3d& p1, const Point3d& p2, 
                                    NgArray<int> & locels) const
   {
     elementsearchtree->GetIntersecting (p1, p2, locels);

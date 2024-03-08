@@ -1359,6 +1359,10 @@ int STLMeshingDummy (STLGeometry* stlgeometry, shared_ptr<Mesh> & mesh, const Me
   int success = 1;
   //int trialcntouter = 0;
 
+  //stringstream ss;
+  //mparam.Print(ss);
+  //PrintMessage(2, ss.str());
+
   if (mparam.perfstepsstart <= MESHCONST_MESHEDGES)
     {
       if (mesh)

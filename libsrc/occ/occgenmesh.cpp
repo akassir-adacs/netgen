@@ -604,6 +604,8 @@ namespace netgen
                        const MeshingParameters & mparam)
   {
     static Timer t("OCCMeshSurface"); RegionTimer r(t);
+
+	PrintMessage(2, "OCCMeshSurface");
     
     // int i, j, k;
     // int changed;

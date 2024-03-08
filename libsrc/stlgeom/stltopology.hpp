@@ -327,7 +327,7 @@ public:
       FindNeighbourTrigs();
   }
   
-  virtual void InitSTLGeometry (const NgArray<STLReadTriangle> & readtrigs);
+  virtual void InitSTLGeometry (NgArray<STLReadTriangle> & readtrigs);
 
   virtual void TopologyChanged() {}; //do some things, if topology changed!
 

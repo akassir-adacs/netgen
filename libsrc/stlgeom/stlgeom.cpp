@@ -2142,7 +2142,7 @@ double STLGeometry :: GetGeomAngle(int t1, int t2)
 }
 
 
-void STLGeometry :: InitSTLGeometry(const NgArray<STLReadTriangle> & readtrias)
+void STLGeometry :: InitSTLGeometry(NgArray<STLReadTriangle> & readtrias)
 {
   PrintFnStart("Init STL Geometry");
   STLTopology::InitSTLGeometry(readtrias);
