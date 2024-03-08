@@ -467,7 +467,8 @@ extern "C" {
 #include <iostream>
 namespace ngcore
 {
-  NGCORE_API extern int printmessage_importance;
+  DLL_HEADER extern int printmessage_importance;
+  DLL_HEADER extern MeshingParameters mparam;
 }
 
 #endif

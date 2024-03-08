@@ -474,7 +474,7 @@ STLGeometry *  STLTopology ::Load (istream & ist, bool surface)
 
 
 
-void STLTopology :: InitSTLGeometry(const NgArray<STLReadTriangle> & readtrigs)
+void STLTopology :: InitSTLGeometry(NgArray<STLReadTriangle> & readtrigs)
 {
   // const double geometry_tol_fact = 1E6; 
   // distances lower than max_box_size/tol are ignored
@@ -508,7 +508,7 @@ void STLTopology :: InitSTLGeometry(const NgArray<STLReadTriangle> & readtrigs)
 
   for(int i = 0; i < readtrigs.Size(); i++)
     {
-      const STLReadTriangle & t = readtrigs[i];
+      STLReadTriangle & t = readtrigs[i];
 
       STLTriangle st;
       st.SetNormal (t.Normal());
@@ -545,6 +545,15 @@ void STLTopology :: InitSTLGeometry(const NgArray<STLReadTriangle> & readtrigs)
 	   (st[1] == st[2]) )
 	{
 	  PrintError("STL Triangle degenerated");
+	  Point<3> pts[3];
+	  Vec<3> normal;
+	  pts[0] = t[0];
+	  pts[1] = t[1];
+	  pts[2] = t[2];
+	  normal[0] = 0;
+	  normal[1] = 0;
+	  normal[2] = 0;
+	  t = STLReadTriangle(pts, normal);
 	}
       else
 	{
