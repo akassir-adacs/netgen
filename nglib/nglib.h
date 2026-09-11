@@ -689,7 +689,6 @@ NGLIB_API void Ng_STL_Generate_SecondOrder (Ng_STL_Geometry * geom,
 NGLIB_API void Ng_CSG_Generate_SecondOrder (Ng_CSG_Geometry * geom,
 					   Ng_Mesh * mesh);
 
-
 #ifdef OCCGEOMETRY
 #include "nglib_occ.h"
 #endif // OCCGEOMETRY

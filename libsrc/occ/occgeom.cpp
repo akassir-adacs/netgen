@@ -514,12 +514,7 @@ namespace netgen
 
             // Set the original properties of the face to the newly created 
             // face (after the healing process)
-<<<<<<< HEAD
             // GetProperties(face);
-=======
-            face = TopoDS::Face (exp0.Current());
-            //face_colours->SetColor(face,face_colour,XCAFDoc_ColorSurf);
->>>>>>> e05d8d67 (removed color checking in geometry healing)
          }
          shape = Apply(rebuild, shape);
       }
